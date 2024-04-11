@@ -1,6 +1,5 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
-import os
 
 def generate_receipt(customer_name, items, total_amount, filename):
     try:
