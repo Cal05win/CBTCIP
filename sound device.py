@@ -12,9 +12,8 @@ def play_audio(filename):
     sd.play(audio_data, samplerate=44100)
     sd.wait()
 
-if __name__ == "__main__":
-    duration = int(input("Enter recording duration in seconds: "))
-    filename = input("Enter filename to save recorded audio (without extension): ") + ".wav"
+duration = int(input("Enter recording duration in seconds: "))
+filename = input("Enter filename to save recorded audio (without extension): ") + ".wav"
     
-    record_audio(duration, filename)
-    print("Audio recording saved as:", filename)
+record_audio(duration, filename)
+print("Audio recording saved as:", filename)
