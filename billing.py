@@ -50,35 +50,4 @@ def cal():
     except Exception as e:
         print(f"An error occurred: {e}")
 cal()
-'''
-from reportlab.lib.pagesizes import letter: This imports the letter size from the ReportLab library, which is commonly used for US letter-sized pages in PDF documents.
-from reportlab.pdfgen import canvas: This imports the canvas module from ReportLab, which allows us to create PDF documents and draw various elements on them.
-generate_receipt Function:
 
-This function takes four parameters: customer_name, items, total_amount, and filename.
-Inside the function:
-It opens a canvas for drawing on a PDF with the specified filename.
-Sets the font to "Helvetica" with a size of 12 points.
-Draws the receipt title and separates it from the rest of the content with a horizontal line.
-Writes the customer's name on the receipt.
-Iterates through the items dictionary, drawing each item name and price on the receipt.
-Draws another horizontal line to separate the items from the total amount.
-Writes the total amount at the bottom of the receipt.
-Saves the PDF file.
-Prints a success message if the receipt is generated successfully.
-It includes error handling using a try-except block to catch any exceptions that might occur during the generation process.
-get_user_input Function:
-
-This function prompts the user to input necessary details for the receipt generation.
-It retrieves and returns the customer's name, item details (as a dictionary), total amount, and filename.
-Error handling is implemented to ensure valid inputs and handle potential exceptions such as ValueError (e.g., when converting inputs to integers or floats).
-cal Function:
-
-This function serves as the main entry point of the program.
-It welcomes the user and calls get_user_input to get the necessary information for receipt generation.
-Then, it calls generate_receipt with the obtained information to create the receipt.
-Error handling is implemented to catch any exceptions that might occur during the process, including KeyboardInterrupt (e.g., if the user interrupts the program).
-Main Block:
-
-The if __name__ == "__main__": block ensures that the cal function is called only if the script is executed directly (not imported as a module).
-'''
