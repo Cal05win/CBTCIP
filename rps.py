@@ -1,24 +1,19 @@
-def play_rps(player1_choice, player2_choice):
-    if player1_choice == player2_choice:
-        return "It's a tie!"
-    elif (player1_choice == 'rock' and player2_choice == 'scissors') or \
-         (player1_choice == 'paper' and player2_choice == 'rock') or \
-         (player1_choice == 'scissors' and player2_choice == 'paper'):
-        return "Naruto wins!"
+def rps(Naruto,Kurama):
+    if Naruto == Kurama:
+        return "It's die"
+    if Naruto == 'rock' and Kurama == 'scissors' or Naruto == 'paper' and Kurama == 'rock' or Naruto == 'scissors' and Kurama == 'paper':
+        return "Naruto Wins"
     else:
-        return "Kurama wins!"
-
-def main():
-    print("Let's play Rock-Paper-Scissors!")
-    naruto = input("Naruto, enter your choice (rock, paper, or scissors): ").lower()
-    kurama = input("Kurama, enter your choice (rock, paper, or scissors): ").lower()
-
-    while naruto not in ['rock', 'paper', 'scissors'] or kurama not in ['rock', 'paper', 'scissors']:
-        print("Invalid input. Please enter 'rock', 'paper', or 'scissors'.")
-        naruto = input("Naruto, enter your choice (rock, paper, or scissors): ").lower()
-        kurama = input("Kurama, enter your choice (rock, paper, or scissors): ").lower()
-
-    print(play_rps(naruto, kurama))
-
-if __name__ == "__main__":
-    main()
+        return "Kurama Wins"
+def calwin():
+    print("Welcome tp rps game da bois!")
+    Naruto=input("Naruto,Enter your value:")
+    Kurama=input("Kurama,Enter your value:")
+    while Naruto not in ['rock','scissors','paper'] or Kurama not in ['rock','scissors','paper']:
+        print("Invalid.Enter your value again('rock','scissors' or 'paper')")
+        Naruto=input("Naruto,Enter your value:")
+        Kurama=input("Kurama,Enter your value:")
+    print(rps(Naruto,Kurama))
+calwin()
+        
+    
